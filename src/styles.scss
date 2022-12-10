@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root{
+    --background:hsl(222, 26%, 31%);
+}
+
+html{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: unset;
+    transition: all 0.4s ease-in-out;
+}

@@ -1,0 +1,171 @@
+main{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+#calculator{
+    --toggle:hsl(6, 63%, 50%);
+    --backgroundToggle:hsl(223, 31%, 20%);
+    --background:hsl(222, 26%, 31%);
+    --text:hsl(0, 0%, 100%);
+    --secondaryText:hsl(221, 14%, 31%);
+    --screenBackground:hsl(224, 36%, 15%);
+    --keyBackground:hsl(30, 25%, 89%);
+    --keyShadow:hsl(28, 16%, 65%);
+    --secondarykeyShadow: hsl(224, 28%, 35%);
+    --secondarykey:hsl(225, 21%, 49%);
+    --thirdkeyShadow:hsl(6, 70%, 34%);
+    --thirdkey:hsl(6, 63%, 50%);
+    --headertext:hsl(0, 0%, 100%);
+
+    --toggle1:hsl(6, 63%, 50%);
+    --backgroundToggle1:hsl(223, 31%, 20%);
+    --background1:hsl(222, 26%, 31%);
+    --text1:hsl(0, 0%, 100%);
+    --secondaryText1:hsl(221, 14%, 31%);
+    --screenBackground1:hsl(224, 36%, 15%);
+    --keyBackground1:hsl(30, 25%, 89%);
+    --keyShadow1:hsl(28, 16%, 65%);
+    --secondarykeyShadow1:hsl(224, 28%, 35%);
+    --secondarykey1:hsl(225, 21%, 49%);
+    --thirdkeyShadow1:hsl(6, 70%, 34%);
+    --thirdkey1:hsl(6, 63%, 50%);
+    --headertext1:hsl(0, 0%, 100%);
+
+    --toggle2:hsl(25, 98%, 40%);
+    --backgroundToggle2:hsl(0, 5%, 81%);
+    --background2:hsl(0, 0%, 90%);
+    --text2:hsl(0, 0%, 100%);
+    --secondaryText2:hsl(60, 10%, 19%);
+    --screenBackground2:hsl(0, 0%, 93%);
+    --keyBackground2:hsl(30, 25%, 89%);
+    --keyShadow2:hsl(28, 16%, 65%);
+    --secondarykeyShadow2:hsl(185, 58%, 25%);
+    --secondarykey2:hsl(185, 42%, 37%);
+    --thirdkeyShadow2:hsl(25, 99%, 27%);
+    --thirdkey2:hsl(25, 98%, 40%);
+    --headertext2:hsl(60, 10%, 19%);
+
+    --toggle3:hsl(176, 100%, 44%);
+    --backgroundToggle3:hsl(268, 71%, 12%);
+    --background3:hsl(268, 75%, 9%);
+    --text3:hsl(0, 0%, 100%);
+    --secondaryText3:hsl(60, 10%, 19%);
+    --screenBackground3:hsl(268, 71%, 12%);
+    --keyBackground3:hsl(281, 89%, 26%);
+    --keyShadow3:hsl(285, 91%, 52%);
+    --secondarykeyShadow3:hsl(285, 91%, 52%);
+    --secondarykey3:hsl(281, 89%, 26%);
+    --thirdkeyShadow3:hsl(177, 92%, 70%);
+    --thirdkey3:hsl(176, 100%, 44%);
+    --headertext3:hsl(52, 100%, 62%);
+
+    background-color: var(--background);
+    height: 100%;
+    max-width: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    @media screen and (min-width:600px) {
+        border-radius: 15px;
+        max-height: 690px;
+    }
+
+    .mainContent{
+        width: 85%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow: hidden;
+        .keyboard{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 22px;
+            background-color: var(--backgroundToggle);
+            padding: 20px;
+            border-radius: 5px;
+            span{
+                border-radius: 5px;
+                background-color: white;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 35px;
+                box-shadow: 0px 3px 2px 1px var(--keyShadow);
+                height: 60px;
+                width: 60px;
+                color: var(--secondaryText);
+            }
+            .secondaryColor{
+                background-color:var(--secondarykey) ;
+                box-shadow: 0px 3px 2px 1px var(--secondarykeyShadow);
+                color:var(--text) ;
+                font-size: 23px;
+            }
+            .thirdColor{
+                background-color:var(--thirdkey) ;
+                box-shadow: 0px 3px 2px 1px var(--thirdkeyShadow);
+                color: var(--text);
+            }
+            .RESET{
+                width: 100%;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            .equal{
+                width: 100%;
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+        }
+    }
+    header{
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        align-items: end;
+        height: 60px;
+        h1{
+            color: var(--headertext);
+            font-size: 35px;
+        }
+        h3{
+            color: var(--headertext);
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    .screen{
+        max-width: 100%;
+        width: 100%;
+        background-color: var(--screenBackground);
+        outline: unset;
+        border: unset;
+        padding: 5px;
+        color: var(--headertext);
+        height: 75px;
+        border-radius: 10px;
+        font-size: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: scroll;
+        flex-direction: row;
+
+        span{
+            display: block;
+            white-space: nowrap;
+            flex-basis:fit-content;
+        }
+    }
+}
